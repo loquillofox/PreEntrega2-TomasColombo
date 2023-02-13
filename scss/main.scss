@@ -1,21 +1,25 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
-}
-body #menu a, body button {
-  font-size: 18px !important;
-  font-weight: 600;
-}
-body #menu a {
-  color: #3f3f3f;
-}
-body .carousel-inner {
-  max-height: 39rem !important;
+
+  #menu a, button {
+    font-size: 18px !important;
+    font-weight: 600;
+  }
+
+  #menu a {
+    color: #3f3f3f;
+  }
+
+  .carousel-inner {
+    max-height: 39rem !important;
+  }
 }
 
 /* TARJETAS */
-.container__card {
+.container__card{
   max-width: 1200px !important;
   margin: auto !important;
   margin-top: 10px !important;
@@ -25,16 +29,16 @@ body .carousel-inner {
   flex-wrap: wrap !important;
 }
 
-.card__father {
+.card__father{
   margin: 10px !important;
   perspective: 1000px !important;
 }
 
-.card__father:hover .card {
+.card__father:hover .card{
   transform: rotateY(180deg) !important;
 }
 
-.card {
+.card{
   width: 350px !important;
   height: 400px !important;
   position: relative !important;
@@ -42,30 +46,29 @@ body .carousel-inner {
   transition: all 600ms !important;
 }
 
-.card__front {
+.card__front{
   background-size: cover !important;
   background-position: center !important;
 }
 
 .card__front,
-.card__back {
+.card__back{
   width: 100% !important;
   height: 100% !important;
   position: absolute !important;
   top: 0 !important;
   left: 0 !important;
-  -webkit-backface-visibility: hidden !important;
-          backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
   transform-style: preserve-3d !important;
   border-radius: 20px !important;
 }
 
-.card__back {
+.card__back{
   transform: rotateY(180deg) !important;
   background: white !important;
 }
 
-.body__card_front {
+.body__card_front{
   width: 100% !important;
   height: 100% !important;
   text-align: center !important;
@@ -77,28 +80,28 @@ body .carousel-inner {
   transform: translateZ(60px) !important;
 }
 
-.bg {
+.bg{
   width: 100% !important;
   height: 100% !important;
   position: absolute !important;
   top: 0 !important;
   left: 0 !important;
-  background: rgba(0, 0, 0, 0.4) !important;
+  background: rgba(0,0,0,0.4) !important;
   border-radius: 20px !important;
 }
 
-.body__card_back {
+.body__card_back{
   padding: 20px !important;
   text-align: center !important;
   transform: translateZ(60px) !important;
 }
 
-.body__card_back p {
+.body__card_back p{
   margin-top: 20px !important;
   font-size: 18px !important;
 }
 
-.body__card_back input {
+.body__card_back input{
   padding: 10px 40px !important;
   margin-top: 10px !important;
   font-size: 16px !important;
@@ -111,77 +114,89 @@ body .carousel-inner {
   transition: box-shadow 600ms !important;
 }
 
-.body__card_back input:hover {
+.body__card_back input:hover{
   box-shadow: 1px 1px 30px 0px #449de6 !important;
 }
-
 /* TARJETAS */
+
+
 footer {
   background: #1b2a4e;
-  min-height: 100px;
+  min-height: 100px;;
 }
 
-footer p {
-  color: #f3f3f3;
-  text-align: center;
+footer p{
+  color:#f3f3f3;
+  text-align:center;
 }
 
 #iconos i {
   font-size: 26px;
   padding: 0 8px;
-  color: #f3f3f3;
+  color:#f3f3f3;
+}
+// MEDIA QUERIES
+@media (max-width:1200px){
+  #intro, #equipo {
+      width:90% !important;
+      margin:auto;
+  }
+
+  #local {
+      flex-wrap: wrap;
+      padding-top:30px;
+ }
+ .wrapper-local {
+  width:90%;
+  margin:auto;
+  padding-top:50px;    
+ }
+
 }
 
-@media (max-width: 1200px) {
-  #intro, #equipo {
-    width: 90% !important;
-    margin: auto;
+@media (max-width:768px) {
+
+  #intro, #equipo{
+      width:90% !important;
+      margin:auto;
   }
-  #local {
-    flex-wrap: wrap;
-    padding-top: 30px;
-  }
-  .wrapper-local {
-    width: 90%;
-    margin: auto;
-    padding-top: 50px;
-  }
-}
-@media (max-width: 768px) {
-  #intro, #equipo {
-    width: 90% !important;
-    margin: auto;
-  }
-  #img-equipo {
-    max-height: 20rem !important;
-    width: 90%;
+
+  
+  #img-equipo{
+      max-height:20rem !important;
+      width:90%;
   }
   .wrapper-local {
-    width: 90%;
-    margin: auto;
-    padding-top: 50px;
+      width:90%;
+      margin:auto;
+      padding-top:50px;    
   }
   #local {
-    flex-wrap: wrap;
+      flex-wrap: wrap;
   }
   .mapa img {
-    width: 100%;
-    height: auto;
+      width:100%;
+      height:auto;
   }
-  #bg-contactos {
-    top: -120px;
+  #bg-contactos{
+      top: -120px;
   }
+
+
 }
+
 @media (max-width: 576px) {
   #servicios-fila-2 {
-    width: 100% !important;
+      width:100% !important;
   }
   #servicios-fila-1 {
-    width: 100% !important;
+      width:100% !important;
   }
-  .icono-wrap {
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    text-align: center;
+
+  .icono-wrap{
+      flex-wrap:wrap !important;
+      justify-content: center !important;
+      text-align: center;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+// MEDIA QUERIES
